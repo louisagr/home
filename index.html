@@ -5,19 +5,18 @@
     // the category, name, key, url, search path and color for your commands
     // if none of the specified keys are matched, the '*' key is used
     commands: [
-      [null, 'Qwant', '*', 'https:/qwant.com', '/?q={}&t=web', '#111'],
-
+      [null, 'Qwant', '*', 'https://qwant.com', '/?q={}&t=web', '#111'],
       ['Rezo', 'facebook', 'fb', 'https://www.facebook.com', '/search/top/?q={}', '#3b5998'],
-      ['Rezo', 'twitter', 't', 'https://twitter.com', '/search?q={}', '#1da1f2'],
+      ['Rezo', 'twitter', 'tw', 'https://twitter.com', '/search?q={}', '#1da1f2'],
       ['Rezo', 'mail', 'm', 'https://mail.google.com/mail/u/0/#inbox', '/search?q={}', '#5f99cf'],
       ['Rezo', 'slack', 'sl', 'https://arinfo-dev2.slack.com', '/search?q={}', '#5f99cf'],
 
-      ['Son', 'youtube', 'y', 'https://youtube.com/', '/results?search_query={}', '#cd201f'],
+      ['Son', 'youtube', 'yt', 'https://youtube.com/', '/results?search_query={}', '#cd201f'],
       ['Son', 'spotify', 'sp', 'https://open.spotify.com', '/#{}', '#39CCCC'],
       ['Son', 'soundcloud', 'sc', 'https://soundcloud.com/', '/search?q={}', '#ff8800'],
 
       ['Info', 'franceinfo', 'fr', 'https://www.francetvinfo.fr/', '/search/{}', '#0099cc'],
-      ['Info', 'afp', 'a', 'https://www.afp.com/', '/search?q={}', '#da552f'],
+      ['Info', 'afp', 'af', 'https://www.afp.com/', '/search?q={}', '#da552f'],
       ['Info', 'le monde', 'lm', 'http://www.lemonde.fr/', '/search/{}', '#34a853'],
       ['Info', 'streetpress', 'sp', 'https://www.streetpress.com/', '/search/{}', '#000'],
 
@@ -74,6 +73,8 @@
     margin: 0;
     padding: 0;
     transition: background-color .2s;
+    background-image: url(forest.png);
+    background-position: bottom;
     background-color: var(--color0);
     font-family: Montserrat, sans-serif;
     color: var(--color15);
@@ -108,13 +109,14 @@
   }
   #clock {
     display: block;
-    margin-top: -.06em;
+    margin-top: -4.5em;
     font-size: 6rem;
     letter-spacing: .05em;
     cursor: pointer;
   }
   #search-form {
     padding: 1em;
+    margin-top: -5em;
     background-color: var(--color0);
     transition: background-color .5s;
     box-sizing: border-box;
@@ -174,22 +176,22 @@
     z-index: 1;
   }
   .category {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .category:last-of-type {
     margin-bottom: 0;
   }
   .category-name {
     margin: 0 0 2rem;
-    font-size: .7em;
+    font-size: .6em;
     letter-spacing: .3em;
-    text-transform: uppercase;
+    text-transform: none;
   }
   .command a {
     display: block;
     position: relative;
     margin: 1em 0;
-    font-size: .9em;
+    font-size: .6em;
     line-height: 2em;
     text-decoration: none;
   }
