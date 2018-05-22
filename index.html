@@ -9,6 +9,7 @@
       ['Rezo', 'facebook', 'fb', 'https://www.facebook.com', '/search/top/?q={}', '#3b5998'],
       ['Rezo', 'twitter', 'tw', 'https://twitter.com', '/search?q={}', '#1da1f2'],
       ['Rezo', 'mail', 'm', 'https://mail.google.com/mail/u/0/#inbox', '/search?q={}', '#5f99cf'],
+      ['Rezo', 'altmail', 'am', 'https://tutanota.com/fr/', '/search?q={}', '#5f99cf'],
       ['Rezo', 'slack', 'sl', 'https://arinfo-dev2.slack.com', '/search?q={}', '#5f99cf'],
 
       ['Son', 'youtube', 'yt', 'https://youtube.com/', '/results?search_query={}', '#cd201f'],
@@ -20,18 +21,24 @@
       ['Info', 'le monde', 'lm', 'http://www.lemonde.fr/', '/search/{}', '#34a853'],
       ['Info', 'streetpress', 'sp', 'https://www.streetpress.com/', '/search/{}', '#000'],
 
-      ['Chill', 'netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
-      ['Chill', 'imgur', 'i', 'https://imgur.com/', '/search{}', '#00d1b2'],
-      ['Chill', '420', 'w', 'http://420chan.org//', '/search{}', '#00d1b2'],
+      ['Dev', 'github', 'gh', 'https://github.com', '/search?q={}', '#333'],
+      ['Dev', 'w3schools', 'w3', 'https://www.w3schools.com/', '/search/{}', '#4285f4'],
+      ['Dev', 'mdn', 'md', 'https://developer.mozilla.org/fr/', '/search/{}', '#fb0'],
+      ['Dev', 'freecodecamp', 'fc', 'https://www.freecodecamp.org/', '/search?q={}', '#333'],
 
+      ['Zepo', 'imgur', 'i', 'https://imgur.com/', '/search{}', '#00d1b2'],
+      ['Zepo', 'tumblr', 'tu', 'https://www.tumblr.com/dashboard/', '/search{}', '#00d1b2'],   
+      ['Zepo', '420', 'w', 'http://420chan.org//', '/search{}', '#00d1b2'],
+      ['Zepo', 'sushi', 'su', 'https://sushigirl.us/', '/search{}', '#00d1b2'],
+      ['Zepo', 'lain', 'la', 'https://lainchan.org/', '/search{}', '#00d1b2'],
+
+      ['Misc', 'netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
       ['Misc', 'wikipédia', 'wi', 'https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal', '/search/{}', '#4c4132'],
       ['Misc', 'MaL', 'ml', 'https://myanimelist.net/', '/search?q={}', '#e50914'],
       ['Misc', 'nyaa', 'ny', 'https://nyaa.si/', '/search{}', '#00d1b2'],
       ['Misc', 'tv tropes', 'tv', 'http://tvtropes.org/', '/search{}', '#00d1b2'],
 
-      ['Dev', 'github', 'gh', 'https://github.com', '/search?q={}', '#333'],
-      ['Dev', 'w3schools', 'w3', 'https://www.w3schools.com/', '/search/{}', '#4285f4'],
-      ['Dev', 'mdn', 'md', 'https://developer.mozilla.org/fr/', '/search/{}', '#fb0'],
+
 
     ],
     // open queries in a new tab
@@ -72,7 +79,7 @@
   }
 </script>
 <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
   :root {
     --color0: #fff;
     --color15: #111;
@@ -90,8 +97,10 @@
     margin: 0;
     padding: 0;
     transition: background-color .2s;
-    background-image: url(forest.png);
-    background-position: bottom;
+    background-image: url(eye.gif);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
     background-color: var(--color0);
     font-family: Montserrat, sans-serif;
     color: var(--color15);
@@ -130,7 +139,7 @@
 
   #clock {
     display: block;
-    margin-top: -4.5em;
+    margin-top: .5em;
     font-size: 6rem;
     letter-spacing: .05em;
     cursor: pointer;
@@ -138,7 +147,6 @@
 
   #search-form {
     padding: 1em;
-    margin-top: -5em;
     background-color: var(--color0);
     transition: background-color .5s;
     box-sizing: border-box;
@@ -217,8 +225,8 @@
   }
 
   .category-name {
-    margin: 0 0 2rem;
-    font-size: .6em;
+    /* margin: 0 0 2rem; */
+    font-size: .5em;
     letter-spacing: .3em;
     text-transform: none;
   }
@@ -242,8 +250,9 @@
     width: 2.5em;
     margin-right: 1em;
     border-radius: 50%;
-    background-color: var(--color15);
-    color: var(--color0);
+    border: .1rem groove;
+    /* background-color: var(--color0); */
+    /* color: var(--color15); */
     font-size: .8em;
     text-align: center;
   }
@@ -262,7 +271,7 @@
     height: 2px;
     transition: .2s;
     transform: translateX(-2em);
-    background: var(--color15);
+    /* background: var(--color15); */
     opacity: 0;
   }
 
